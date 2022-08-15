@@ -11,9 +11,10 @@ export default class NewsItems extends Component {
             <img src={!imageUrl ? "https://images.wsj.net/im-594668/social" : imageUrl} className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{title}....
-              <span className='position-absolute top-0 translate-middle badge rounded-pill bg-primary' style={{left : '90%' , zIndex : '1 '}}>
-                {source}
-              </span>
+              <div className='d-flex justify-content-end position-absolute top-0' style={{right : '0'}}>
+              <span className='badge rounded-pill bg-primary'>       {source}         </span>
+              </div>
+             
               </h5>
               <p className="card-text">{description}....</p>
               <p className="card-text"><small className="text-muted"> By {!author ? 'Unknown' : author} on {new Date(date).toGMTString()}</small></p>
